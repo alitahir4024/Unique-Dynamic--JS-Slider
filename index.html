@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider Using JS</title>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="slider-div">
+
+            <img src="back1.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back2.jfif" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back3.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back4.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back5.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back6.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back7.jpg" alt="">
+
+        </div>
+
+        <div class="slider-div">
+
+            <img src="back8.jpg" alt="">
+
+        </div>
+
+
+    </section>
+
+    <button onclick="slider()"></button>
+
+    <button onclick="slider_1()"></button>
+
+    <button onclick="slider_2()"></button>
+
+    <button onclick="slider_3()"></button>
+
+    <button onclick="slider_4()"></button>
+
+    <button onclick="slider_5()"></button>
+
+    <button onclick="slider_6()"></button>
+
+    <button onclick="slider_7()"></button>
+
+</body>
+
+<script>
+
+    var s = document.getElementsByTagName("section")[0].style
+
+    var img_1 = document.getElementsByTagName("img")[0].style
+
+    var img_2 = document.getElementsByTagName("img")[1].style
+
+    var img_3 = document.getElementsByTagName("img")[2].style
+
+    var img_4 = document.getElementsByTagName("img")[3].style
+
+    var img_5 = document.getElementsByTagName("img")[4].style
+
+    var img_6 = document.getElementsByTagName("img")[5].style
+
+    var img_7 = document.getElementsByTagName("img")[6].style
+
+    var img_8 = document.getElementsByTagName("img")[7].style
+
+    var div_1 = document.getElementsByClassName("slider-div")[0].style
+
+    var div_2 = document.getElementsByClassName("slider-div")[1].style
+
+    var div_3 = document.getElementsByClassName("slider-div")[2].style
+
+    var div_4 = document.getElementsByClassName("slider-div")[3].style
+
+    var div_5 = document.getElementsByClassName("slider-div")[4].style
+
+    var div_6 = document.getElementsByClassName("slider-div")[5].style
+
+    var div_7 = document.getElementsByClassName("slider-div")[6].style
+
+    var div_8 = document.getElementsByClassName("slider-div")[7].style
+
+    var btn_1 = document.getElementsByTagName("button")[0].style
+
+    var btn_2 = document.getElementsByTagName("button")[1].style
+
+    var btn_3 = document.getElementsByTagName("button")[2].style
+
+    var btn_4 = document.getElementsByTagName("button")[3].style
+
+    var btn_5 = document.getElementsByTagName("button")[4].style
+
+    var btn_6 = document.getElementsByTagName("button")[5].style
+
+    var btn_7 = document.getElementsByTagName("button")[6].style
+
+    var btn_8 = document.getElementsByTagName("button")[7].style
+
+    s.position = "relative"
+    s.height = "83vh"
+    s.width = "80%"
+    s.overflow = "hidden"
+    s.marginLeft = "10%"
+    s.marginTop = "4%"
+
+    div_1.position = "absolute"
+    div_1.height = "100vh"
+    div_1.width = "100%"
+    div_1.overflow = "hidden"
+    div_1.transform = "translateX(100%)"
+
+    div_2.position = "absolute"
+    div_2.height = "100vh"
+    div_2.width = "100%"
+    div_2.overflow = "hidden"
+    div_2.transform = "translateX(-100%)"
+
+    div_3.position = "absolute"
+    div_3.height = "100vh"
+    div_3.width = "100%"
+    div_3.overflow = "hidden"
+    div_3.transform = "translateY(-100%)"
+
+    div_4.position = "absolute"
+    div_4.height = "100vh"
+    div_4.width = "100%"
+    div_4.overflow = "hidden"
+    div_4.transform = "translateY(100%)"
+
+    div_5.position = "absolute"
+    div_5.height = "100vh"
+    div_5.width = "100%"
+    div_5.overflow = "hidden"
+    div_5.transform = "translateX(100%) translateY(-100%)"
+
+    div_6.position = "absolute"
+    div_6.height = "100vh"
+    div_6.width = "100%"
+    div_6.overflow = "hidden"
+    div_6.transform = "translateX(100%) translateY(100%)"
+
+    div_7.position = "absolute"
+    div_7.height = "100vh"
+    div_7.width = "100%"
+    div_7.overflow = "hidden"
+    div_7.transform = "translateX(-100%) translateY(100%)"
+
+    div_8.position = "absolute"
+    div_8.height = "100vh"
+    div_8.width = "100%"
+    div_8.overflow = "hidden"
+    div_8.transform = "translateX(-100%) translateY(-100%)"
+
+    img_1.height = "100%"
+    img_1.width = "100%"
+
+    img_2.height = "100%"
+    img_2.width = "100%"
+
+    img_3.height = "100%"
+    img_3.width = "100%"
+
+    img_4.height = "100%"
+    img_4.width = "100%"
+
+    img_5.height = "100%"
+    img_5.width = "100%"
+
+    img_6.height = "100%"
+    img_6.width = "100%"
+
+    img_7.height = "100%"
+    img_7.width = "100%"
+
+    img_8.height = "100%"
+    img_8.width = "100%"
+
+    btn_1.position = "absolute"
+    btn_1.top = "20%"
+    btn_1.left = "3%"
+    btn_1.border = "none"
+    btn_1.height = "4vh"
+    btn_1.width = "2%"
+    btn_1.backgroundColor = "#323232"
+    btn_1.borderRadius = "50%"
+    btn_1.outline = "none"
+
+    btn_2.position = "absolute"
+    btn_2.top = "26%"
+    btn_2.left = "3%"
+    btn_2.border = "none"
+    btn_2.height = "4vh"
+    btn_2.width = "2%"
+    btn_2.backgroundColor = "#323232"
+    btn_2.borderRadius = "50%"
+    btn_2.outline = "none"
+
+    btn_3.position = "absolute"
+    btn_3.top = "33%"
+    btn_3.left = "3%"
+    btn_3.border = "none"
+    btn_3.height = "4vh"
+    btn_3.width = "2%"
+    btn_3.backgroundColor = "#323232"
+    btn_3.borderRadius = "50%"
+    btn_3.outline = "none"
+
+    btn_4.position = "absolute"
+    btn_4.top = "40%"
+    btn_4.left = "3%"
+    btn_4.border = "none"
+    btn_4.height = "4vh"
+    btn_4.width = "2%"
+    btn_4.backgroundColor = "#323232"
+    btn_4.borderRadius = "50%"
+    btn_4.outline = "none"
+
+    btn_5.position = "absolute"
+    btn_5.top = "20%"
+    btn_5.left = "94%"
+    btn_5.border = "none"
+    btn_5.height = "4vh"
+    btn_5.width = "2%"
+    btn_5.backgroundColor = "#323232"
+    btn_5.borderRadius = "50%"
+    btn_5.outline = "none"
+
+    btn_6.position = "absolute"
+    btn_6.top = "26%"
+    btn_6.left = "94%"
+    btn_6.border = "none"
+    btn_6.height = "4vh"
+    btn_6.width = "2%"
+    btn_6.backgroundColor = "#323232"
+    btn_6.borderRadius = "50%"
+    btn_6.outline = "none"
+
+    btn_7.position = "absolute"
+    btn_7.top = "33%"
+    btn_7.left = "94%"
+    btn_7.border = "none"
+    btn_7.height = "4vh"
+    btn_7.width = "2%"
+    btn_7.backgroundColor = "#323232"
+    btn_7.borderRadius = "50%"
+    btn_7.outline = "none"
+
+    btn_8.position = "absolute"
+    btn_8.top = "40%"
+    btn_8.left = "94%"
+    btn_8.border = "none"
+    btn_8.height = "4vh"
+    btn_8.width = "2%"
+    btn_8.backgroundColor = "#323232"
+    btn_8.borderRadius = "50%"
+    btn_8.outline = "none"
+
+    function slider() {
+        var slider = document.getElementsByClassName("slider-div")[0].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_4.transform = "translateY(100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "orangered"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_1() {
+        var slider = document.getElementsByClassName("slider-div")[1].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_3.transform = "translateY(-100%)"
+        div_4.transform = "translateY(100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "orangered"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_2() {
+        var slider = document.getElementsByClassName("slider-div")[2].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_4.transform = "translateY(100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "orangered"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_3() {
+        var slider = document.getElementsByClassName("slider-div")[3].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "orangered"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_4() {
+        var slider = document.getElementsByClassName("slider-div")[4].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_4.transform = "translateY(100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "orangered"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_5() {
+        var slider = document.getElementsByClassName("slider-div")[5].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "orangered"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_6() {
+        var slider = document.getElementsByClassName("slider-div")[6].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_8.transform = "translateX(-100%) translateY(-100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "orangered"
+        btn_8.backgroundColor = "#323232"
+    }
+
+    function slider_7() {
+        var slider = document.getElementsByClassName("slider-div")[7].style
+        slider.transform = "translate(0%)"
+        slider.transition = "all 0.5s"
+        div_1.transform = "translateX(100%)"
+        div_2.transform = "translateX(-100%)"
+        div_3.transform = "translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_5.transform = "translateX(100%) translateY(-100%)"
+        div_6.transform = "translateX(100%) translateY(100%)"
+        div_7.transform = "translateX(-100%) translateY(100%)"
+        btn_1.backgroundColor = "#323232"
+        btn_2.backgroundColor = "#323232"
+        btn_3.backgroundColor = "#323232"
+        btn_4.backgroundColor = "#323232"
+        btn_5.backgroundColor = "#323232"
+        btn_6.backgroundColor = "#323232"
+        btn_7.backgroundColor = "#323232"
+        btn_8.backgroundColor = "orangered"
+    }
+
+
+</script>
+
+</html>
