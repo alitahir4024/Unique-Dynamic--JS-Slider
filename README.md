@@ -1,2 +1,18 @@
 # Unique-Dynamic-JS-Slider
-Its an unique and dynamic JS slider using only JS and HTML.In this project I have a basic unique and dynamic JS slider.Slider's are the most important thing in the development of any type of website.Slider gives us dynamic style and design.This project is basically for the beginner of JS DOM.
+
+Its an unique and dynamic JS slider using only JS and HTML.
+
+### Developed with:
+
+* HTML.
+* JS (Most work).
+
+### Silent Features:
+
+* Unique and Dyanmic style.
+* Easy to develop and easy to use.
+
+
+### Preview:
+
+(https://github.com/Ali-Tahir4024/Unique-Dynamic--JS-Slider/blob/master/screencapture-file-C-Users-alita-OneDrive-Documents-GitHub-Unique-Dynamic-JS-Slider-index-html-2020-04-28-10_40_31.png).
