@@ -16,3 +16,5 @@ Its an unique and dynamic JS slider using only JS and HTML.
 ### Preview:
 
 (https://github.com/Ali-Tahir4024/Unique-Dynamic--JS-Slider/blob/master/screencapture-file-C-Users-alita-OneDrive-Documents-GitHub-Unique-Dynamic-JS-Slider-index-html-2020-04-28-10_40_31.png).
+
+(https://ali-tahir4024.github.io/Unique-Dynamic--JS-Slider/)
